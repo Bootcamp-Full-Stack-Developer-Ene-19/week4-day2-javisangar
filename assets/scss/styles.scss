@@ -1,0 +1,66 @@
+$colours: '#ff0066', turquoise, blueviolet;
+
+
+.background {
+    width: 300px;
+    height: 300px;
+    border: 0;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.background__color-map {
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-name: transition-colors;
+}
+@keyframes transition-colors {
+    0% {background-color: unquote(nth($colours, 1));}
+    50% {background-color:(nth($colours, 2));}
+    100%{background-color:unquote(nth($colours, 3));}
+}
+
+
+:root {
+    --color-first: #4A148C;
+    --color-second: #E040FB;
+  }
+  
+  $squareList: 
+      (1rem, 0.5rem, 2.25rem, 0),
+      (0, 1.5rem, 1.25rem, 3rem);
+  @mixin box($radius) {
+    $radius1: nth($radius, 1);
+    $radius2: nth($radius, 2);
+    $radius3: nth($radius, 3);
+    $radius4: nth($radius, 4);
+    border-top-left-radius:$radius1;
+    border-top-right-radius:$radius2;
+    border-bottom-left-radius:$radius3;
+    border-bottom-right-radius:$radius4;
+  }
+  
+  .container {
+    display: flex;
+    padding: 50px;
+  }
+  .box-1 {
+    margin-left: 50px;
+    width: 200px;
+    height:200px;
+    background-color: var(--color-first); 
+    @include box(nth($squareList, 1));
+  }
+  
+  .box-2 {
+    margin-left: 10px;
+    width: 200px;
+    height:200px;
+    background-color: var(--color-second);
+    @include box(nth($squareList, 2));
+  }
+  
+  
+  

@@ -1,0 +1,78 @@
+.background {
+  width: 300px;
+  height: 300px;
+  border: 0;
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.background__color-map {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: transition-colors;
+          animation-name: transition-colors;
+}
+
+@-webkit-keyframes transition-colors {
+  0% {
+    background-color: #ff0066;
+  }
+  50% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: blueviolet;
+  }
+}
+
+@keyframes transition-colors {
+  0% {
+    background-color: #ff0066;
+  }
+  50% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: blueviolet;
+  }
+}
+
+:root {
+  --color-first: #4A148C;
+  --color-second: #E040FB;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px;
+}
+
+.box-1 {
+  margin-left: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--color-first);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 2.25rem;
+  border-bottom-right-radius: 0;
+}
+
+.box-2 {
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--color-second);
+  border-top-left-radius: 0;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 3rem;
+}
+/*# sourceMappingURL=styles.css.map */
